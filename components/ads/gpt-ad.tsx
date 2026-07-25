@@ -1,12 +1,14 @@
 "use client";
 
+import { AffiliateAd } from "@/components/ads/affiliate-ad";
+
 interface GptAdProps {
   placement: "top" | "middle" | "bottom";
   className?: string;
 }
 
-export function GptAd(_props: GptAdProps) {
-  return null;
+export function GptAd({ placement, className = "" }: GptAdProps) {
+  return <AffiliateAd placement={placement} className={className} />;
 }
 
 export function GptAnchorAd() {

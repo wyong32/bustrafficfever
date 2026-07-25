@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteNavbar } from "@/components/layout/site-navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GptAnchorAd, GptInterstitialAd } from "@/components/ads/gpt-ad";
+import { AffiliateGlobalAds } from "@/components/ads/affiliate-ad";
 import { canonical, gameDescription, gameKeywords, OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -101,6 +102,7 @@ export default function RootLayout({
           <main className="min-h-screen bg-background">
             {children}
           </main>
+          <AffiliateGlobalAds />
           <GptAnchorAd />
           <GptInterstitialAd />
         </ThemeProvider>
