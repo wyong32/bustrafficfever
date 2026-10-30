@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     title: 'Terms of Service - BusTrafficFever.org',
     description: 'Read the Terms of Service for BusTrafficFever.org.',
     images: [OG_IMAGE],
-    creator: '@Bus Traffic FeverGuide'
   },
   alternates: { canonical: canonical("/terms-of-service/") }
 };

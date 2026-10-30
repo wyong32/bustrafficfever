@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { canonical, OG_IMAGE, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Bus Traffic Fever Blog - Guides, Tips & Strategy July 2026",
+  title: "Bus Traffic Fever Blog - Guides, Tips & Strategy",
   description: "Read Bus Traffic Fever strategy articles, beginner tips, parking jam walkthrough notes, bus route advice, and level-solving guides.",
   keywords: ["Bus Traffic Fever blog", "Bus Traffic Fever guide", "Bus Traffic Fever tips", "parking jam strategy", "bus puzzle walkthrough"],
   authors: [{ name: "Bus Traffic Fever Guide Team" }],
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: canonical("/blog/"),
     siteName: SITE_NAME,
     title: 'Bus Traffic Fever Blog - Guides, Tips & Strategy',
-    description: 'Read Bus Traffic Fever strategy articles, beginner tips, walkthrough notes, and tile deduction advice.',
+    description: 'Read Bus Traffic Fever strategy articles, passenger-order tips, walkthrough notes, and parking jam advice.',
     images: [
       {
         url: OG_IMAGE,
@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     title: 'Bus Traffic Fever Blog - Guides, Tips & Strategy',
     description: 'Read Bus Traffic Fever strategy articles, beginner tips, and walkthrough notes.',
     images: [OG_IMAGE],
-    creator: '@Bus Traffic FeverGuide'
   },
   robots: {
     index: true,

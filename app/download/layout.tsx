@@ -18,8 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Download Bus Traffic Fever for iOS and Android',
     description: 'Download Bus Traffic Fever and play relaxing parking jam puzzles.',
-    images: [OG_IMAGE],
-    creator: '@BusTrafficFeverGuide'
+    images: [OG_IMAGE]
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: canonical("/download/") }

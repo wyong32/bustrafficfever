@@ -6,6 +6,7 @@ Bus Traffic Fever Guide is a walkthrough and tips site for **Bus Traffic Fever**
 
 - Home: https://bustrafficfever.org/
 - Level guides: https://bustrafficfever.org/levels/
+- Find a level by screenshot: https://bustrafficfever.org/find-level/
 - Level 1 walkthrough: https://bustrafficfever.org/levels/1/
 - Blog: https://bustrafficfever.org/blog/
 - Download: https://bustrafficfever.org/download/

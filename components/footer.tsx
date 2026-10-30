@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             <h3 className="text-base font-semibold text-foreground mb-4">Navigation</h3>
             <ul className="space-y-3">
-              {[["/", "Home"], ["/levels", "Level Solutions"], ["/blog", "Blog"], ["/download", "Download"], ["/about-us", "About Us"], ["/contact-us", "Contact Us"]].map(([href, label]) => (
+              {[["/", "Home"], ["/levels/", "Level Solutions"], ["/find-level/", "Find Level by Screenshot"], ["/blog/", "Blog"], ["/download/", "Download"], ["/about-us/", "About Us"], ["/contact-us/", "Contact Us"]].map(([href, label]) => (
                 <li key={href}><Link href={href} className="text-sm text-muted-foreground hover:text-primary hover:underline">{label}</Link></li>
               ))}
             </ul>
@@ -35,7 +35,7 @@ export function Footer() {
             <h3 className="text-base font-semibold text-foreground mb-4">Popular Levels</h3>
             <ul className="space-y-3">
               {popularLevels.map((level) => (
-                <li key={level}><Link href={`/levels/${level}`} className="text-sm text-muted-foreground hover:text-primary hover:underline">Bus Traffic Fever Level {level}</Link></li>
+                <li key={level}><Link href={`/levels/${level}/`} className="text-sm text-muted-foreground hover:text-primary hover:underline">Bus Traffic Fever Level {level}</Link></li>
               ))}
             </ul>
           </div>
@@ -44,7 +44,7 @@ export function Footer() {
             <h3 className="text-base font-semibold text-foreground mb-4">Level Guides</h3>
             <ul className="space-y-3">
               {guideLevels.map((level) => (
-                <li key={level}><Link href={`/levels/${level}`} className="text-sm text-muted-foreground hover:text-primary hover:underline">Level {level} Walkthrough</Link></li>
+                <li key={level}><Link href={`/levels/${level}/`} className="text-sm text-muted-foreground hover:text-primary hover:underline">Level {level} Walkthrough</Link></li>
               ))}
             </ul>
           </div>

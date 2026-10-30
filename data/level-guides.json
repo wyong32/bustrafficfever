@@ -1,0 +1,117 @@
+{
+  "1": {
+    "objective": "Load every blue, red, and yellow passenger",
+    "keyChallenge": "Keep the bus order aligned with the loop entrance",
+    "quickAnswer": "Clear both blue buses first, send the two red buses next, and leave the two yellow buses for the final passenger group. The six buses form three color pairs, so the solution follows the color order shown at the loop entrance.",
+    "overallStrategy": [
+      "Level 1 teaches the main rule: the passenger color at the loading entrance decides which bus should enter a bay. Work through one color pair at a time instead of tapping every visible bus.",
+      "The parking area starts with enough room for the active buses, but using the wrong color leaves a bay occupied while the matching passengers remain behind another group. Follow blue, red, then yellow."
+    ],
+    "startingBoard": "The passenger loop begins with a large blue group at the lower-left entrance, followed by red and yellow. The vehicle cluster contains two blue buses at the upper-left, two red buses on the right, and two yellow buses along the lower-left edge.",
+    "steps": [
+      { "title": "Send the two blue buses from the left side", "instruction": "Tap the exposed blue bus at the upper-left of the vehicle cluster. Send the second blue bus beside it after the first reaches the loading bays. Both buses serve the blue group already at the loop entrance.", "image": "/levels/1/steps/step-1.webp", "imageAlt": "Blue bus loading the first passenger group in Bus Traffic Fever Level 1" },
+      { "title": "Move the two red buses from the right", "instruction": "Wait until the red passengers reach the lower entrance. Tap the two red buses on the right side of the remaining cluster. Keep the yellow pair parked below until both red buses have started loading.", "image": "/levels/1/steps/step-2.webp", "imageAlt": "Red buses entering the loading bays in Bus Traffic Fever Level 1" },
+      { "title": "Finish with the yellow pair", "instruction": "Tap the two yellow buses left at the lower-left of the board. The first yellow bus opens the final passenger stream, and the second clears the remaining yellow group and completes the level.", "image": "/levels/1/steps/step-3.webp", "imageAlt": "Final yellow buses clearing Bus Traffic Fever Level 1" }
+    ],
+    "beforeMove": ["The next passenger group matches the selected bus.", "Both buses of the current color remain accessible.", "The yellow pair stays parked until the final phase.", "The board still shows the blue-red-yellow order."],
+    "stuckPoint": "Players usually tap a yellow bus while blue or red passengers still control the entrance. That yellow bus occupies a bay without loading. Restart and finish both buses of the active color before changing colors.",
+    "faqs": [
+      { "question": "What is the Bus Traffic Fever Level 1 bus order?", "answer": "Use both blue buses, then both red buses, then both yellow buses." },
+      { "question": "Which bus should move first in Level 1?", "answer": "Start with either exposed blue bus on the left side of the vehicle cluster." },
+      { "question": "Why does a yellow bus wait in a bay?", "answer": "Yellow passengers have not reached the entrance yet. Clear blue and red before sending yellow." },
+      { "question": "Does Level 1 need a booster?", "answer": "No. The starting bays are enough when you follow the three color pairs in order." }
+    ]
+  },
+  "2": {
+    "objective": "Clear the orange, green, and purple passenger groups",
+    "keyChallenge": "Avoid filling bays with purple buses too early",
+    "quickAnswer": "Open with the two orange buses across the top, use the two green horizontal buses when green reaches the entrance, and bring in the purple vertical buses in the last phase. Keep one bay free while the colors change.",
+    "overallStrategy": [
+      "The compact vehicle grid makes every bus look available, but the loop controls the useful order. Remove the exposed top row first, then work through the center without opening every purple bus at once.",
+      "Purple appears in several separate passenger groups. Sending all purple buses together blocks the orange and green buses needed between those groups."
+    ],
+    "startingBoard": "Two orange horizontal buses sit across the top of the vehicle grid. Green buses occupy the middle row, while purple vertical buses stand on the left, center, and right. The passenger loop mixes orange, green, and purple sections.",
+    "steps": [
+      { "title": "Clear the two orange buses across the top", "instruction": "Tap the left orange bus on the top row, then the matching orange bus beside it. They enter the first bays and remove the orange passengers nearest the loading entrance.", "image": "/levels/2/steps/step-1.webp", "imageAlt": "Orange opening phase in Bus Traffic Fever Level 2" },
+      { "title": "Use the green buses through the center", "instruction": "When green reaches the entrance, tap the two horizontal green buses in the middle of the grid. Do not send every purple vertical bus while the green pair is loading.", "image": "/levels/2/steps/step-2.webp", "imageAlt": "Green center buses in Bus Traffic Fever Level 2" },
+      { "title": "Finish the remaining purple and orange buses", "instruction": "Use the purple buses from the outer columns as each purple group reaches the entrance. Send the center orange bus between those purple groups, then clear the last purple bus.", "image": "/levels/2/steps/step-3.webp", "imageAlt": "Final purple phase in Bus Traffic Fever Level 2" }
+    ],
+    "beforeMove": ["One loading bay remains empty.", "The entrance color matches the bus.", "The center orange bus stays accessible.", "Purple buses are sent in separate groups."],
+    "stuckPoint": "The main mistake is sending all visible purple buses together. The loop places orange and green between purple groups, so a full row of waiting purple buses removes the space needed for those colors.",
+    "faqs": [
+      { "question": "What color starts Bus Traffic Fever Level 2?", "answer": "Orange starts the reliable route; use the two orange buses on the top row." },
+      { "question": "When should I move the green buses?", "answer": "Move the two center green buses when the green passenger group reaches the entrance." },
+      { "question": "Why do the purple buses block Level 2?", "answer": "Purple passengers are split into separate groups, so sending every purple bus at once occupies too many bays." },
+      { "question": "Do I need extra bays for Level 2?", "answer": "No. Keep one default bay empty during each color change." }
+    ]
+  },
+  "3": {
+    "objective": "Clear the blue, yellow, and red loop",
+    "keyChallenge": "Alternate colors instead of emptying one vehicle row",
+    "quickAnswer": "Use the exposed yellow bus near the top first, then bring in blue and red buses as their passenger blocks reach the entrance. Return to yellow between those groups and keep one loading bay open.",
+    "overallStrategy": [
+      "Level 3 has several rows of small buses, so clearing a whole row is not the solution. The passenger loop repeats blue, yellow, and red, and your selections need to follow that repeating order.",
+      "Work from exposed outer buses toward the middle. A bus that becomes visible is not automatically the next bus; confirm the entrance color before tapping it."
+    ],
+    "startingBoard": "The vehicle layout is a layered block of blue, yellow, and red buses. Blue buses are concentrated along the right and lower edges, yellow buses sit through the center, and red buses are mixed into the upper and middle rows.",
+    "steps": [
+      { "title": "Open with the exposed yellow bus near the top", "instruction": "Tap the yellow bus that can leave from the upper part of the vehicle block. It serves the yellow group at the entrance and exposes the first useful blue and red routes.", "image": "/levels/3/steps/step-1.webp", "imageAlt": "Yellow opening bus in Bus Traffic Fever Level 3" },
+      { "title": "Alternate blue and red through the middle", "instruction": "Send the exposed blue bus from the right side when blue reaches the entrance. Follow with the red bus opened in the middle, then return to yellow rather than clearing the entire blue edge.", "image": "/levels/3/steps/step-2.webp", "imageAlt": "Blue and red middle phase in Bus Traffic Fever Level 3" },
+      { "title": "Clear the lower blue buses last", "instruction": "After the final red and yellow groups load, use the blue buses left along the lower and right edges. The last blue bus removes the remaining blue passengers and completes the board.", "image": "/levels/3/steps/step-3.webp", "imageAlt": "Final blue phase in Bus Traffic Fever Level 3" }
+    ],
+    "beforeMove": ["The selected bus can leave the vehicle block.", "The entrance color matches its body color.", "A different color bus will still have a free bay.", "The lower blue buses remain available for the end."],
+    "stuckPoint": "Players often clear several blue buses as soon as the right edge opens. Red and yellow groups still interrupt the blue stream, so those extra blue buses wait in the bays and remove the space needed for the middle phase.",
+    "faqs": [
+      { "question": "Which color starts Level 3?", "answer": "Use the exposed yellow bus near the upper part of the vehicle block." },
+      { "question": "Can I clear all blue buses together?", "answer": "No. Red and yellow passenger groups interrupt the blue sequence." },
+      { "question": "Where are the final buses in Level 3?", "answer": "The last useful blue buses are along the lower and right edges of the vehicle layout." },
+      { "question": "What causes a full loading area?", "answer": "Sending several buses of a color before its passenger group reaches the entrance fills the bays." }
+    ]
+  },
+  "4": {
+    "objective": "Clear five mixed passenger colors",
+    "keyChallenge": "Manage the larger grid without using every bay",
+    "quickAnswer": "Start with the exposed green and pink buses on the left, use cyan buses from the outer columns, and hold the yellow and brown center buses until those passenger colors reach the entrance. Finish with one bay open.",
+    "overallStrategy": [
+      "Level 4 expands the vehicle grid and introduces more color changes. The safe route works from the exposed outside buses inward while preserving access to the yellow and brown buses in the center.",
+      "Do not treat the five bays as permission to queue five colors. Keep one bay empty so the next required color can enter when the passenger loop changes."
+    ],
+    "startingBoard": "The rectangular vehicle grid contains cyan buses on both outer columns, green buses through the left and center, pink vertical buses, yellow buses around the middle, and brown buses near the top and bottom rows.",
+    "steps": [
+      { "title": "Open the left side with green and pink", "instruction": "Tap the exposed green bus on the left edge, then the nearby pink vertical bus when pink reaches the entrance. This removes the first blockers without sealing the center lanes.", "image": "/levels/4/steps/step-1.webp", "imageAlt": "Green and pink opening in Bus Traffic Fever Level 4" },
+      { "title": "Use cyan buses from the outer columns", "instruction": "Send cyan buses from the left and right edges as the cyan groups arrive. Work downward along the outside of the grid and leave the yellow center bus parked.", "image": "/levels/4/steps/step-2.webp", "imageAlt": "Cyan outside buses in Bus Traffic Fever Level 4" },
+      { "title": "Release yellow and brown, then clean the center", "instruction": "Tap the yellow and brown buses only when their matching passengers control the entrance. Finish with the remaining green, cyan, and pink buses exposed through the center.", "image": "/levels/4/steps/step-3.webp", "imageAlt": "Center cleanup in Bus Traffic Fever Level 4" }
+    ],
+    "beforeMove": ["The next center bus will remain reachable.", "At least one loading bay is empty.", "The selected outer bus matches the entrance.", "Yellow and brown stay parked until needed."],
+    "stuckPoint": "The difficult point is the first large cyan group. Sending every visible cyan bus fills the bays before yellow or brown can enter. Use only the cyan buses needed for the current group, then change colors with the loop.",
+    "faqs": [
+      { "question": "What is the safest opening for Level 4?", "answer": "Open the left side with the exposed green bus and the nearby pink bus." },
+      { "question": "When should I use the cyan buses?", "answer": "Use cyan from the outer columns only while cyan passengers are at the entrance." },
+      { "question": "Why should yellow and brown wait?", "answer": "Those center buses are needed after the early green, pink, and cyan groups." },
+      { "question": "How many bays should stay free?", "answer": "Keep at least one loading bay open during every color change." }
+    ]
+  },
+  "5": {
+    "objective": "Clear the radial vehicle formation",
+    "keyChallenge": "Work outside-in while the loop alternates four colors",
+    "quickAnswer": "Remove the exposed outer yellow and orange buses first, then alternate cyan and pink as those groups reach the entrance. Keep the center buses accessible and finish the last color pair after the radial formation opens.",
+    "overallStrategy": [
+      "The vehicles form a ring around a tight center. Each outer bus you remove exposes another bus pointing in a different direction, so the color at the passenger entrance matters more than the visual ring order.",
+      "Work around the outside in short color phases. Avoid clearing a complete side of the ring if that queues a color whose passengers are still behind another group."
+    ],
+    "startingBoard": "Yellow buses occupy the upper outside of the radial formation. Pink and cyan buses stand through the middle spokes, with orange buses on the lower and side edges. The passenger track alternates yellow, pink, cyan, and orange sections.",
+    "steps": [
+      { "title": "Open the radial ring with yellow and orange", "instruction": "Tap the exposed yellow buses on the upper outside when yellow reaches the entrance. Use the orange bus opened on the side next, but keep the inner pink and cyan spokes parked.", "image": "/levels/5/steps/step-1.webp", "imageAlt": "Outer ring opening in Bus Traffic Fever Level 5" },
+      { "title": "Alternate cyan and pink through the spokes", "instruction": "Send the cyan bus from the lower spoke as cyan reaches the entrance, then use the exposed pink bus from the center. Continue alternating those colors instead of emptying one spoke completely.", "image": "/levels/5/steps/step-2.webp", "imageAlt": "Cyan and pink spoke phase in Bus Traffic Fever Level 5" },
+      { "title": "Finish the opened center with the last color pair", "instruction": "After the ring breaks apart, use the remaining yellow and orange buses around the outside. Clear the final cyan and pink buses from the center only when their passenger groups reach the loading point.", "image": "/levels/5/steps/step-3.webp", "imageAlt": "Final center phase in Bus Traffic Fever Level 5" }
+    ],
+    "beforeMove": ["The bus points toward an open route.", "Its passenger color is at the entrance.", "Removing it will expose a useful inner bus.", "One loading bay remains free for the next color."],
+    "stuckPoint": "The radial layout invites you to tap every bus on one side. That queues too many buses of one color. Move around the ring according to the passenger sequence and keep newly exposed center buses for their matching groups.",
+    "faqs": [
+      { "question": "How do I open the Level 5 vehicle ring?", "answer": "Use the exposed outer yellow buses, then the orange bus opened beside them." },
+      { "question": "Should I clear one side of the ring first?", "answer": "No. Alternate sides and colors according to the passenger entrance." },
+      { "question": "When should the center buses move?", "answer": "Move a center spoke only after its color reaches the passenger entrance." },
+      { "question": "What is the main Level 5 risk?", "answer": "Filling the loading bays with one color before the loop reaches that passenger group." }
+    ]
+  }
+}

@@ -7,6 +7,8 @@ import { DEFAULT_TEN_LEVEL_RANGE, getTenLevelRanges, MAX_LEVEL, parseLevelNumber
 import { SocialShare } from "@/components/social-share";
 import { Footer } from "@/components/footer";
 import { GptAd } from "@/components/ads/gpt-ad";
+import Link from "next/link";
+import { ScanSearch } from "lucide-react";
 
 export default function LevelsPage() {
   const allLevels = getAllLevels();
@@ -27,11 +29,18 @@ export default function LevelsPage() {
         <div className="mb-12">
           <GptAd placement="top" />
           <h1 className="text-3xl font-bold mb-4 text-center text-foreground">
-            Bus Traffic Fever Available Level Walkthroughs
+            Bus Traffic Fever All Levels Walkthroughs
           </h1>
           <p className="text-center text-muted-foreground text-lg leading-relaxed max-w-4xl mx-auto">
             Browse {TOTAL_GUIDES} Bus Traffic Fever video guides up to Level {MAX_LEVEL}. Use the range filters to find a specific parking jam puzzle, then follow the video route to clear buses safely.
           </p>
+
+          <div className="mt-5 text-center">
+            <Link href="/find-level/" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">
+              <ScanSearch className="h-4 w-4" />
+              Find a changed board by screenshot
+            </Link>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <SocialShare />

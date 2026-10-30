@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Level } from "@/types";
 import { cn } from "@/lib/utils";
+import { getLevelCover } from "@/lib/data";
 
 interface LevelCardProps {
   level: Level;
@@ -11,7 +12,7 @@ interface LevelCardProps {
 export function LevelCard({ level, className }: LevelCardProps) {
   return (
     <Link href={`/levels/${level.id}`} className={cn("group block w-full", className)}>
-      <div className="relative w-full max-w-[274px] mx-auto aspect-[274/200] overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white">
+      <div className="relative mx-auto w-full max-w-[300px] overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         {/* Level badge */}
         <div className="absolute top-2 left-2 z-10">
           <div className="bg-[#E89654] text-white px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold shadow-md">
@@ -20,12 +21,12 @@ export function LevelCard({ level, className }: LevelCardProps) {
         </div>
 
         {/* Game screenshot */}
-        <div className="relative w-full aspect-[272/153] overflow-hidden bg-gray-100">
+        <div className="relative aspect-[6/5] w-full overflow-hidden bg-muted">
           <Image
-            src={level.videoThumbnail || level.thumbnail || "/levels/demo.webp"}
-            alt={`Bus Traffic Fever Level ${level.id}`}
+            src={getLevelCover(level)}
+            alt={`Bus Traffic Fever Level ${level.id} board`}
             fill
-            className="object-cover group-hover:brightness-75 transition-all duration-300"
+            className="object-cover transition-all duration-300 group-hover:brightness-90"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             unoptimized
           />
@@ -44,8 +45,8 @@ export function LevelCard({ level, className }: LevelCardProps) {
         </div>
 
         {/* Bottom title section */}
-        <div className="bg-white px-3 sm:px-4 py-2 sm:pt-[0.625rem] sm:pb-[1.625rem] flex items-center justify-center min-h-[50px] sm:min-h-[60px]">
-          <h3 className="font-semibold text-[#5C4D3C] text-sm sm:text-base text-center group-hover:text-[#E89654] transition-colors line-clamp-2">
+        <div className="flex min-h-[58px] items-center justify-center bg-card px-3 py-3 sm:px-4">
+          <h3 className="line-clamp-2 text-center text-sm font-semibold text-foreground transition-colors group-hover:text-primary sm:text-base">
             {level.title || `Bus Traffic Fever Level ${level.id}`}
           </h3>
         </div>

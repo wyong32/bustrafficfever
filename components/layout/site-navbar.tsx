@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Play, Download, Sun, Moon, Menu, X, Search, BookOpen } from "lucide-react";
+import { Home, Play, Download, Sun, Moon, Menu, X, Search, BookOpen, ScanSearch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -38,6 +38,7 @@ export function SiteNavbar() {
   const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/levels", label: "Levels", icon: Play },
+    { href: "/find-level/", label: "Find Level", icon: ScanSearch },
     { href: "/blog", label: "Blog", icon: BookOpen },
     { href: "/download", label: "Download", icon: Download },
   ];

@@ -10,6 +10,10 @@ export function getLevelById(id: string): Level | undefined {
   return levels.find((level) => level.id === id);
 }
 
+export function getLevelCover(level: Level): string {
+  return level.coverImage || level.videoThumbnail || level.thumbnail || "/Bus-Traffic-Fever.jpg";
+}
+
 export function getLevelsByCategory(category: string): Level[] {
   const levels = getAllLevels();
   return levels.filter((level) => level.category === category);

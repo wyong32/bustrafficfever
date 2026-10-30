@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     title: 'Contact Us - BusTrafficFever.org',
     description: 'Contact BusTrafficFever.org with Bus Traffic Fever guide feedback.',
     images: [OG_IMAGE],
-    creator: '@Bus Traffic FeverGuide'
   },
   alternates: { canonical: canonical("/contact-us/") }
 };

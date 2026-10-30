@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { getAllLevels, getLevelById } from "@/lib/data";
-import { canonical, GAME_NAME, OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
+import { getAllLevels, getLevelById, getLevelCover } from "@/lib/data";
+import { getLevelFaqs, getVerifiedLevelGuide } from "@/lib/level-guides";
+import { canonical, GAME_NAME, SITE_NAME, SITE_URL } from "@/lib/site";
 
 type Props = {
   params: Promise<{ id: string }>;
   children: React.ReactNode;
 };
 
+function absoluteImage(source: string) {
+  return source.startsWith("http") ? source : `${SITE_URL}${source}`;
+}
+
 export async function generateStaticParams() {
-  const levels = getAllLevels();
-  return levels.map((level) => ({ id: level.id }));
+  return getAllLevels().map((level) => ({ id: level.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -18,83 +22,124 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const level = getLevelById(id);
 
   if (!level) {
-    return { title: "Bus Traffic Fever Level Not Found", description: "The requested Bus Traffic Fever level guide could not be found." };
+    return {
+      title: "Bus Traffic Fever Level Not Found",
+      description: "The requested Bus Traffic Fever level guide could not be found.",
+      robots: { index: false, follow: true },
+    };
   }
 
-  const levelNumber = level.id;
   const url = canonical(`/levels/${id}/`);
-  const title = `Bus Traffic Fever Level ${levelNumber} Walkthrough & Solution`;
-  const description = `Watch the Bus Traffic Fever Level ${levelNumber} walkthrough video with parking jam routing, bus move order, passenger flow, and lane-clearing tips.`;
-  const image = level.videoThumbnail || level.thumbnail || OG_IMAGE;
+  const title = `Bus Traffic Fever Level ${id} Walkthrough & Solution`;
+  const description = `Solve Bus Traffic Fever Level ${id} with the complete video walkthrough, board comparison, related levels, and verified written steps when available.`;
+  const image = absoluteImage(getLevelCover(level));
 
   return {
     title,
     description,
-    keywords: ["Bus Traffic Fever", `Bus Traffic Fever Level ${levelNumber}`, "walkthrough", "solution", "guide", "parking jam puzzle", "bus puzzle"],
-    authors: [{ name: "Bus Traffic Fever Guide Team" }],
+    keywords: [
+      `Bus Traffic Fever Level ${id}`,
+      `Bus Traffic Fever Level ${id} walkthrough`,
+      `Bus Traffic Fever Level ${id} solution`,
+      "parking jam puzzle guide",
+      "bus puzzle walkthrough",
+    ],
+    authors: [{ name: "BusTrafficFever.org Guide Team", url: canonical("/about-us/") }],
+    alternates: { canonical: url },
     openGraph: {
-      type: 'article',
+      type: "article",
       url,
       siteName: SITE_NAME,
       title,
       description,
-      images: [{ url: image, width: 1200, height: 630, alt: `Bus Traffic Fever Level ${levelNumber} walkthrough` }],
+      publishedTime: "2026-10-30T00:00:00+08:00",
+      modifiedTime: "2026-10-30T00:00:00+08:00",
+      images: [{ url: image, width: 600, height: 500, alt: `Bus Traffic Fever Level ${id} board and walkthrough` }],
     },
-    twitter: { card: 'summary_large_image', title, description, images: [image], creator: '@BusTrafficFeverGuide' },
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: { canonical: url }
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+    },
   };
 }
 
 export default async function LevelLayout({ params, children }: Props) {
   const { id } = await params;
   const level = getLevelById(id);
-  if (!level) return <>{children}</>;
+  if (!level) return children;
 
   const url = canonical(`/levels/${id}/`);
-  const levelNumber = level.id;
-  const thumbnail = level.videoThumbnail || level.thumbnail;
+  const guide = getVerifiedLevelGuide(id);
+  const faqs = getLevelFaqs(id, guide);
+  const thumbnail = absoluteImage(getLevelCover(level));
+  const videoObject = level.videoUrl
+    ? {
+        "@type": "VideoObject",
+        "@id": `${url}#video`,
+        name: `Bus Traffic Fever Level ${id} Walkthrough Solution`,
+        description: `Complete gameplay solution for Bus Traffic Fever Level ${id}.`,
+        thumbnailUrl: [thumbnail],
+        ...(level.videoUploadDate ? { uploadDate: level.videoUploadDate } : {}),
+        ...(level.videoDurationIso ? { duration: level.videoDurationIso } : {}),
+        embedUrl: level.videoUrl,
+        contentUrl: level.videoId ? `https://www.youtube.com/watch?v=${level.videoId}` : level.videoUrl,
+        publisher: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: canonical(),
+          logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+        },
+      }
+    : undefined;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "VideoObject",
-        "@id": `${url}#video`,
-        "name": `Bus Traffic Fever Level ${levelNumber} Walkthrough Solution`,
-        "description": level.description,
-        "thumbnailUrl": [`${SITE_URL}${thumbnail}`],
-        "uploadDate": "2026-07-08",
-        "duration": level.videoDuration,
-        "embedUrl": level.videoUrl,
-        "contentUrl": level.videoUrl,
-        "publisher": { "@type": "Organization", "name": SITE_NAME, "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` } }
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: `Bus Traffic Fever Level ${id} Walkthrough and Solution`,
+        description: guide?.quickAnswer || `Complete video solution and board guide for Bus Traffic Fever Level ${id}.`,
+        image: [thumbnail],
+        datePublished: "2026-10-30T00:00:00+08:00",
+        dateModified: "2026-10-30T00:00:00+08:00",
+        mainEntityOfPage: url,
+        author: { "@type": "Organization", name: "BusTrafficFever.org Guide Team", url: canonical("/about-us/") },
+        publisher: { "@type": "Organization", name: SITE_NAME, url: canonical() },
+        ...(videoObject ? { video: { "@id": `${url}#video` } } : {}),
       },
+      ...(videoObject ? [videoObject] : []),
       {
         "@type": "FAQPage",
         "@id": `${url}#faq`,
-        "mainEntity": [
-          { "@type": "Question", "name": `How do I solve Bus Traffic Fever Level ${levelNumber}?`, "acceptedAnswer": { "@type": "Answer", "text": "Watch the embedded walkthrough and follow the proven bus move order while keeping exits and passenger routes open." } },
-          { "@type": "Question", "name": "What should I check before the first move?", "acceptedAnswer": { "@type": "Answer", "text": "Check which buses block the most exits, where passengers are waiting, and which lane can stay open for later moves." } },
-          { "@type": "Question", "name": "Why does my Bus Traffic Fever board fail?", "acceptedAnswer": { "@type": "Answer", "text": "Boards usually fail when a bus is moved into the only useful lane or when passenger flow is blocked too early." } },
-          { "@type": "Question", "name": "Can I use the same route if my board looks different?", "acceptedAnswer": { "@type": "Answer", "text": "Use the video as the main sequence reference, then adjust if your board variant opens a different bus route first." } },
-          { "@type": "Question", "name": `Is Bus Traffic Fever Level ${levelNumber} timed?`, "acceptedAnswer": { "@type": "Answer", "text": "Bus Traffic Fever rewards careful traffic planning. A clean route matters more than speed." } }
-        ]
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": canonical() },
-          { "@type": "ListItem", "position": 2, "name": `${GAME_NAME} Levels`, "item": canonical("/levels/") },
-          { "@type": "ListItem", "position": 3, "name": `Level ${levelNumber}`, "item": url }
-        ]
-      }
-    ]
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: canonical() },
+          { "@type": "ListItem", position: 2, name: `${GAME_NAME} Levels`, item: canonical("/levels/") },
+          { "@type": "ListItem", position: 3, name: `Level ${id}`, item: url },
+        ],
+      },
+    ],
   };
 
   return (
     <>
-      <Script id={`level-${id}-schema`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="beforeInteractive" />
+      <Script
+        id={`level-${id}-schema`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        strategy="beforeInteractive"
+      />
       {children}
     </>
   );

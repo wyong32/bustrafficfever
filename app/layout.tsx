@@ -10,7 +10,7 @@ import { canonical, gameDescription, gameKeywords, OG_IMAGE, SITE_NAME, SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Bus Traffic Fever Guide & Level Solutions July 2026",
+    default: "Bus Traffic Fever Guide, Answers & Level Solutions",
     template: `%s | ${SITE_NAME}`
   },
   description: `${gameDescription} Find updated walkthrough videos, level solutions, strategy tips, and download links for iOS and Android.`,
@@ -47,8 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Bus Traffic Fever Walkthrough Guides, Level Solutions & Tips',
     description: gameDescription,
-    images: [OG_IMAGE],
-    creator: '@BusTrafficFeverGuide'
+    images: [OG_IMAGE]
   },
   robots: {
     index: true,

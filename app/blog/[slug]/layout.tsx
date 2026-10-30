@@ -55,7 +55,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       images: [post.image],
-      creator: '@Bus Traffic FeverGuide'
     },
     alternates: {
       canonical: url

@@ -36,7 +36,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/1/steps/step-1.webp",
+      "/levels/1/steps/step-2.webp",
+      "/levels/1/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/1/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:13.000Z",
+    "videoDurationIso": "PT5M26S"
   },
   {
     "id": "2",
@@ -75,7 +84,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/2/steps/step-1.webp",
+      "/levels/2/steps/step-2.webp",
+      "/levels/2/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/2/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:13.000Z",
+    "videoDurationIso": "PT5M26S"
   },
   {
     "id": "3",
@@ -114,7 +132,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/3/steps/step-1.webp",
+      "/levels/3/steps/step-2.webp",
+      "/levels/3/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/3/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:13.000Z",
+    "videoDurationIso": "PT5M26S"
   },
   {
     "id": "4",
@@ -153,7 +180,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/4/steps/step-1.webp",
+      "/levels/4/steps/step-2.webp",
+      "/levels/4/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/4/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:13.000Z",
+    "videoDurationIso": "PT5M26S"
   },
   {
     "id": "5",
@@ -192,7 +228,17 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/5/steps/step-1.webp",
+      "/levels/5/steps/step-2.webp",
+      "/levels/5/steps/step-3.webp",
+      "/levels/5/steps/step-4.webp"
+    ],
+    "coverImage": "/levels/5/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:13.000Z",
+    "videoDurationIso": "PT5M26S"
   },
   {
     "id": "6",
@@ -231,7 +277,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/6/steps/step-1.webp",
+      "/levels/6/steps/step-2.webp",
+      "/levels/6/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/6/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:25.000Z",
+    "videoDurationIso": "PT3M13S"
   },
   {
     "id": "7",
@@ -270,7 +325,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/7/steps/step-1.webp",
+      "/levels/7/steps/step-2.webp",
+      "/levels/7/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/7/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:48:51.000Z",
+    "videoDurationIso": "PT3M15S"
   },
   {
     "id": "8",
@@ -309,7 +373,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/8/steps/step-1.webp",
+      "/levels/8/steps/step-2.webp",
+      "/levels/8/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/8/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:49:09.000Z",
+    "videoDurationIso": "PT3M7S"
   },
   {
     "id": "9",
@@ -348,7 +421,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/9/steps/step-1.webp",
+      "/levels/9/steps/step-2.webp",
+      "/levels/9/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/9/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:49:38.000Z",
+    "videoDurationIso": "PT3M44S"
   },
   {
     "id": "10",
@@ -387,7 +469,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/10/steps/step-1.webp",
+      "/levels/10/steps/step-2.webp",
+      "/levels/10/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/10/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:49:53.000Z",
+    "videoDurationIso": "PT3M19S"
   },
   {
     "id": "11",
@@ -426,7 +517,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/11/steps/step-1.webp",
+      "/levels/11/steps/step-2.webp",
+      "/levels/11/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/11/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:50:10.000Z",
+    "videoDurationIso": "PT3M20S"
   },
   {
     "id": "12",
@@ -465,7 +565,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/12/steps/step-1.webp",
+      "/levels/12/steps/step-2.webp",
+      "/levels/12/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/12/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:50:34.000Z",
+    "videoDurationIso": "PT3M3S"
   },
   {
     "id": "13",
@@ -504,7 +613,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/13/steps/step-1.webp",
+      "/levels/13/steps/step-2.webp",
+      "/levels/13/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/13/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:51:03.000Z",
+    "videoDurationIso": "PT4M7S"
   },
   {
     "id": "14",
@@ -543,7 +661,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/14/steps/step-1.webp",
+      "/levels/14/steps/step-2.webp",
+      "/levels/14/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/14/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:51:27.000Z",
+    "videoDurationIso": "PT3M41S"
   },
   {
     "id": "15",
@@ -582,7 +709,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/15/steps/step-1.webp",
+      "/levels/15/steps/step-2.webp",
+      "/levels/15/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/15/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T21:52:36.000Z",
+    "videoDurationIso": "PT7M28S"
   },
   {
     "id": "16",
@@ -621,7 +757,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/16/steps/step-1.webp",
+      "/levels/16/steps/step-2.webp",
+      "/levels/16/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/16/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T22:59:33.000Z",
+    "videoDurationIso": "PT3M1S"
   },
   {
     "id": "17",
@@ -660,7 +805,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/17/steps/step-1.webp",
+      "/levels/17/steps/step-2.webp",
+      "/levels/17/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/17/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T23:00:01.000Z",
+    "videoDurationIso": "PT3M19S"
   },
   {
     "id": "18",
@@ -699,7 +853,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/18/steps/step-1.webp",
+      "/levels/18/steps/step-2.webp",
+      "/levels/18/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/18/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T23:00:46.000Z",
+    "videoDurationIso": "PT4M9S"
   },
   {
     "id": "19",
@@ -738,7 +901,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/19/steps/step-1.webp",
+      "/levels/19/steps/step-2.webp",
+      "/levels/19/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/19/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T23:00:55.000Z",
+    "videoDurationIso": "PT4M13S"
   },
   {
     "id": "20",
@@ -777,7 +949,16 @@
       "solution",
       "parking jam puzzle",
       "bus puzzle"
-    ]
+    ],
+    "guideImages": [
+      "/levels/20/steps/step-1.webp",
+      "/levels/20/steps/step-2.webp",
+      "/levels/20/steps/step-3.webp"
+    ],
+    "coverImage": "/levels/20/cover.webp",
+    "assetVersion": 1,
+    "videoUploadDate": "2026-05-04T23:01:38.000Z",
+    "videoDurationIso": "PT6M16S"
   },
   {
     "id": "21",

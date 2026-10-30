@@ -21,5 +21,10 @@ export interface Level {
   videoId?: string;
   videoThumbnail?: string;
   videoDuration?: string;
+  videoDurationIso?: string;
+  videoUploadDate?: string;
   videoTitle?: string;
+  coverImage?: string;
+  guideImages?: string[];
+  assetVersion?: number;
 }

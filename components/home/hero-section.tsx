@@ -2,10 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Check, Star, ArrowRight, ChevronDown } from "lucide-react";
+import { Check, Star, ArrowRight, ChevronDown, ScanSearch } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { MAX_LEVEL, MIN_LEVEL } from "@/lib/level-utils";
 import { DOWNLOAD_COUNT, GAME_NAME, RATING_VALUE } from "@/lib/site";
 import { getLevelById } from "@/lib/data";
@@ -112,6 +113,11 @@ export function HeroSection() {
               </a>
             </p>
           </div>
+
+          <Link href="/find-level/" className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline lg:mb-0">
+            <ScanSearch className="h-4 w-4" />
+            Board number changed? Find the level by screenshot
+          </Link>
 
           <div className="flex items-center gap-2 mb-6 lg:mb-0">
             <div className="flex">

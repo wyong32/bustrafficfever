@@ -2,11 +2,6 @@ import { Footer } from "@/components/footer";
 import { GptAd } from "@/components/ads/gpt-ad";
 import { GAME_DEVELOPER, GAME_NAME, SITE_NAME } from "@/lib/site";
 
-export const metadata = {
-  title: "About Us - Bus Traffic Fever Guide",
-  description: "Learn about BusTrafficFever.org, an independent guide site for Bus Traffic Fever walkthroughs, level solutions, logic tips, and download information.",
-};
-
 export default function AboutUsPage() {
   return (
     <div>
@@ -29,11 +24,22 @@ export default function AboutUsPage() {
               <h2 className="text-2xl font-bold text-foreground mb-4">What We Offer</h2>
               <ul className="space-y-3 ml-6 list-disc">
                 <li className="leading-relaxed">Available Bus Traffic Fever level walkthroughs with embedded video guides.</li>
-                <li className="leading-relaxed">Strategy explanations for bus order, open lanes, passenger flow, and deadlock prevention.</li>
+                <li className="leading-relaxed">Video-checked strategy explanations for bus order, open lanes, passenger flow, and loading-bay management.</li>
+                <li className="leading-relaxed"><a href="/find-level/" className="text-primary hover:underline">Screenshot matching</a> for boards whose level numbers changed after an update.</li>
                 <li className="leading-relaxed">Beginner-friendly articles for learning parking jam rules and avoiding wasted moves.</li>
                 <li className="leading-relaxed">Download links for the official iOS and Android app pages.</li>
                 <li className="leading-relaxed">Regular updates when new reliable level videos are collected.</li>
               </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-foreground mb-4">How We Build a Level Guide</h2>
+              <p className="leading-relaxed mb-4">
+                We start with a complete gameplay recording. The guide page keeps the source video, a board image, and written steps only when the vehicle colors, positions, and move order can be checked on screen.
+              </p>
+              <p className="leading-relaxed">
+                A page without verified written steps remains a video-first guide. We do not fill missing details with a repeated solution template. Board images and screenshot matching are added in reviewed batches.
+              </p>
             </section>
 
             <section>

@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     image: "/Bus-Traffic-Fever-1.jpg",
     category: "Guides & Tips",
     categoryId: "guides",
-    date: "July 9, 2026",
+    date: "October 30, 2026",
     readTime: "8 min read",
     author: "Bus Traffic Fever Guide Team",
     content: `
@@ -36,6 +36,7 @@ export const blogPosts: BlogPost[] = [
       <p>A deadlock happens when a bus parks in the only lane another vehicle needs. Before moving, ask whether that space will still be useful after the bus stops.</p>
       <h2>Use Walkthroughs Carefully</h2>
       <p>When stuck, watch only the next few moves, pause, and return to your board. This helps you learn the route logic instead of only copying the full solution.</p>
+      <p>When a game update changes the displayed number, use the <a href="/find-level/">screenshot level finder</a> to compare the board with processed guide images.</p>
     `,
   },
   {
@@ -46,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     image: "/Bus-Traffic-Fever-2.jpg",
     category: "Strategy",
     categoryId: "strategy",
-    date: "July 9, 2026",
+    date: "October 30, 2026",
     readTime: "9 min read",
     author: "Bus Traffic Fever Guide Team",
     content: `
@@ -61,6 +62,7 @@ export const blogPosts: BlogPost[] = [
       <p>If the level uses passenger or color matching, do not send buses randomly. The best route keeps the correct bus type moving toward the correct collection area.</p>
       <h2>Review Video Solutions</h2>
       <p>A walkthrough is most useful when you compare board states. Pause after each key move and note which lane became available.</p>
+      <p>Start with the <a href="/levels/">all levels directory</a>, then use the related-level cards to compare nearby boards.</p>
     `,
   },
   {
@@ -71,7 +73,7 @@ export const blogPosts: BlogPost[] = [
     image: "/Bus-Traffic-Fever-3.jpg",
     category: "Walkthroughs",
     categoryId: "walkthroughs",
-    date: "July 9, 2026",
+    date: "October 30, 2026",
     readTime: "7 min read",
     author: "Bus Traffic Fever Guide Team",
     content: `
@@ -86,6 +88,7 @@ export const blogPosts: BlogPost[] = [
       <p>Watch the next move, pause the video, and solve from there. This keeps the level engaging while still helping you pass difficult layouts.</p>
       <h2>Stay Consistent</h2>
       <p>Bus Traffic Fever is about clean traffic planning. A steady route with no deadlocks is faster than rushed tapping that forces restarts.</p>
+      <p>If your board does not match the numbered guide, search by image with the <a href="/find-level/">Bus Traffic Fever screenshot finder</a>.</p>
     `,
   },
 ];

@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     title: 'About Us - BusTrafficFever.org',
     description: 'Learn about BusTrafficFever.org, an independent Bus Traffic Fever guide site.',
     images: [OG_IMAGE],
-    creator: '@Bus Traffic FeverGuide'
   },
   alternates: { canonical: canonical("/about-us/") }
 };

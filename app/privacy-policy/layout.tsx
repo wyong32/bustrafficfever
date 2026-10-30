@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     title: 'Privacy Policy - BusTrafficFever.org',
     description: 'Read the Privacy Policy for BusTrafficFever.org.',
     images: [OG_IMAGE],
-    creator: '@Bus Traffic FeverGuide'
   },
   alternates: { canonical: canonical("/privacy-policy/") }
 };
