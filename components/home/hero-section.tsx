@@ -82,11 +82,13 @@ export function HeroSection() {
           </div>
 
           <div className="mb-6 sm:mb-8 bg-card/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border shadow-sm">
-            <label className="text-xs sm:text-sm font-medium text-foreground mb-2 sm:mb-3 block">
+            <label htmlFor="hero-level-search" className="text-xs sm:text-sm font-medium text-foreground mb-2 sm:mb-3 block">
               Jump to a specific level:
             </label>
             <div className="flex gap-2 sm:gap-3">
               <Input
+                id="hero-level-search"
+                name="level"
                 type="text"
                 inputMode="numeric"
                 pattern="[0-9]*"

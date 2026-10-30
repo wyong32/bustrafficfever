@@ -87,6 +87,8 @@ export function SiteNavbar() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
+                id="site-level-search"
+                name="level"
                 type="text"
                 inputMode="numeric"
                 placeholder={`Enter level (${MIN_LEVEL}-${MAX_LEVEL})`}
